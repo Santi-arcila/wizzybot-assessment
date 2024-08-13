@@ -12,7 +12,7 @@ This project is a chatbot API built with NestJS. It uses the OpenAI API to provi
 1. Clone the repository:
 
     ```sh
-    git clone <repository-url>
+    git clone https://github.com/Santi-arcila/wizzybot-assessment.git
     cd wizzybot-assessment
     ```
 
