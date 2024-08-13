@@ -36,3 +36,44 @@ To run the application in a development environment, use the following command:
 
 ```sh
 npm run start:dev
+```
+
+The application will start and listen on port 3000.
+
+## API Documentation
+
+The API documentation is available at http://localhost:3000/api once the application is running.
+
+## Making a Request to the Chatbot Endpoint
+
+To get a response from the chatbot, make a POST request to the /chatbot endpoint with the following payload:
+
+### Request
+* URL: http://localhost:3000/chatbot
+* Method: POST
+* Headers: Content-Type: application/json
+* Body: 
+```JSON 
+{
+  "query": "I want a phone"
+}
+```
+### Response
+* Status: 200 OK
+* Body:
+```JSON {
+  "response": "I found a couple of phone options for you:\n\n1. [iPhone 12](https://wizybot-demo-store.myshopify.com/products/iphone-12)\n   - Price: $900.0 USD\n   - Colors available: Black, Blue, Red, Green, White\n   - Capacity options: 64gb, 128gb\n   - Discount: 1%\n\n2. [iPhone 13](https://wizybot-demo-store.myshopify.com/products/iphone-13)\n"
+}
+```
+### Error Response
+* Status: 400 Bad Request
+* Body:
+```JSON
+{
+  "message": "Error message",
+  "error": "Bad Request",
+  "statusCode": 400
+}
+```
+## License
+This project is licensed under the UNLICENSED License.
